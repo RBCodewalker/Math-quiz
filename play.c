@@ -16,7 +16,7 @@ extern int play(quiz_t *quiz)
     int try;
     int x = quiz->max;
 
-    while(x && flag == 0)
+    while(x)
     {
         printf("%d pt> ", x);
         char buffr[50];
@@ -35,6 +35,7 @@ extern int play(quiz_t *quiz)
 
         if(try < quiz->number)
         {
+            flag = 0;
             x /= 2;
             if(x != 0)
             {
@@ -49,6 +50,7 @@ extern int play(quiz_t *quiz)
         }
         else if(try > quiz->number)
         {
+            flag = 0;
             x /= 2;
             if(x != 0)
             {
@@ -61,7 +63,7 @@ extern int play(quiz_t *quiz)
             }
             continue;
         }
-        else
+        else if(flag == 0)
         {
             quiz->score += x;
             printf("Congratulation, your answer %d is correct.\n", try);
