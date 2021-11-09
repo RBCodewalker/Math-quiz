@@ -1,3 +1,3 @@
 # Math-quiz
 Match quiz through online oracle
-# LINKING and JSON-parse
+# LINKING, PIPES, SIGNALS and JSON-parse
