@@ -5,7 +5,7 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <string.h>
-#include<json-c/json.h>
+#include <json-c/json.h>
 
 #include "quiz.h"
 
